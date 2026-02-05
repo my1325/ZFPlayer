@@ -8,7 +8,7 @@
 
 #import "ZFTableHeaderViewController.h"
 #import "ZFTableHeaderView.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+//#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
@@ -43,7 +43,7 @@ static NSString *kIdentifier = @"kIdentifier";
     self.headerView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width*9/16);
     
     /// playerManager
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
     /// player的tag值必须在cell里设置
     self.player = [ZFPlayerController playerWithScrollView:self.tableView playerManager:playerManager containerView:self.headerView.coverImageView];
     self.player.playerDisapperaPercent = 1.0;

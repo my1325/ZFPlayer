@@ -7,7 +7,7 @@
 //
 
 #import "ZFSmallPlayViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+//#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
@@ -41,8 +41,8 @@ static NSString *kIdentifier = @"kIdentifier";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Push" style:UIBarButtonItemStylePlain target:self action:@selector(pushNewVC)];
     
     /// playerManager
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
 //    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
     
     /// player的tag值必须在cell里设置
     self.player = [ZFPlayerController playerWithScrollView:self.tableView playerManager:playerManager containerViewTag:kPlayerViewTag];

@@ -7,7 +7,7 @@
 //
 
 #import "ZFDouYinViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/ZFPlayerConst.h>
@@ -45,7 +45,7 @@ static NSString *kIdentifier = @"kIdentifier";
     self.tableView.mj_header = header;
 
     /// playerManager
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
 //    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
 
     /// player,tag值必须在cell里设置

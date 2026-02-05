@@ -8,7 +8,7 @@
 
 #import "ZFCustomControlViewViewController.h"
 #import "ZFCustomControlView.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
@@ -33,7 +33,7 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.containerView];
    
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
     /// 播放器相关
     self.player = [ZFPlayerController playerWithPlayerManager:playerManager containerView:self.containerView];
     self.player.controlView = self.controlView;

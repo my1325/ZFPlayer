@@ -20,12 +20,7 @@
   },
   "requires_arc": true,
   "static_framework": true,
-  "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-  },
-  "user_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-  },
+  "default_subspecs": "Core",
   "subspecs": [
     {
       "name": "Core",
@@ -64,6 +59,9 @@
       "public_header_files": "ZFPlayer/Classes/ijkplayer/*.h",
       "dependencies": {
         "ZFPlayer/Core": [
+
+        ],
+        "IJKMediaFramework": [
 
         ]
       }

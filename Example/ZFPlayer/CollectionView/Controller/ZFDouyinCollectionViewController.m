@@ -9,7 +9,7 @@
 #import "ZFDouyinCollectionViewController.h"
 #import "ZFDouyinCollectionViewCell.h"
 #import "ZFTableData.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
 #import <ZFPlayer/ZFPlayerConst.h>
@@ -41,8 +41,8 @@ static NSString * const reuseIdentifier = @"collectionViewCell";
     [self requestData];
     
     /// playerManager
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
-    
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
+
     /// player的tag值必须在cell里设置
     self.player = [ZFPlayerController playerWithScrollView:self.collectionView playerManager:playerManager containerViewTag:kPlayerViewTag];
     self.player.controlView = self.controlView;

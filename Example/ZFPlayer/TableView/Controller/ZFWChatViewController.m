@@ -8,9 +8,9 @@
 
 #import "ZFWChatViewController.h"
 #import <ZFPlayer/ZFPlayer.h>
-#import <ZFPlayer/ZFAVPlayerManager.h>
-#import <ZFPlayer/ZFIJKPlayerManager.h>
-#import <ZFPlayer/ZFPlayerControlView.h>
+//#import <ZFPlayer/ZFIJKPlayerManager.h>
+#import "ZFPlayer/ZFIJKPlayerManager.h"
+#import "ZFPlayer/ZFPlayerControlView.h"
 #import <ZFPlayer/UIView+ZFFrame.h>
 #import "ZFTableViewCell.h"
 #import "ZFTableData.h"
@@ -37,7 +37,7 @@ static NSString *kIdentifier = @"kIdentifier";
     [self.view addSubview:self.tableView];
     [self requestData];
     
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
 //    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
     playerManager.scalingMode = ZFPlayerScalingModeAspectFill;
 

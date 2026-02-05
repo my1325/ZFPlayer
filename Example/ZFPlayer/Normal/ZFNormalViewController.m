@@ -7,7 +7,7 @@
 //
 
 #import "ZFNormalViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+//#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import "ZFNotAutoPlayViewController.h"
@@ -92,8 +92,8 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
 }
 
 - (void)setupPlayer {
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
 //    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
 
     playerManager.shouldAutoPlay = YES;
     
@@ -133,13 +133,13 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
 
 - (void)picBtnClick {
     /// 配置画中画
-    ZFAVPlayerManager *manager = (ZFAVPlayerManager *)self.player.currentPlayerManager;
-    AVPictureInPictureController *vc = [[AVPictureInPictureController alloc] initWithPlayerLayer:manager.avPlayerLayer];
-    self.vc = vc;
-    ///要有延迟 否则可能开启不成功
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self.vc startPictureInPicture];
-    });
+//    ZFIJKPlayerManager *manager = (ZFIJKPlayerManager *)self.player.currentPlayerManager;
+//    AVPictureInPictureController *vc = [[AVPictureInPictureController alloc] initWithPlayerLayer:manager.avPlayerLayer];
+//    self.vc = vc;
+//    ///要有延迟 否则可能开启不成功
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+//        [self.vc startPictureInPicture];
+//    });
 }
 
 - (void)changeVideo:(UIButton *)sender {

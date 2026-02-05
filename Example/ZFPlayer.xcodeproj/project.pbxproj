@@ -22,6 +22,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		80BE2428ECB65735B49B8FC1 /* libPods-ZFPlayer_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EDC6B3234B489A216C8825 /* libPods-ZFPlayer_Example.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B751F36C2F3489F000CA5FCF /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B751F36A2F3489F000CA5FCF /* libcrypto.a */; };
+		B751F36D2F3489F000CA5FCF /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B751F36B2F3489F000CA5FCF /* libssl.a */; };
 		CC112E9A20DBD45E0051EE60 /* ZFMixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC112E9920DBD45E0051EE60 /* ZFMixViewController.m */; };
 		CC112E9D20DBD6600051EE60 /* ZFOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC112E9C20DBD6600051EE60 /* ZFOtherCell.m */; };
 		CC47EB6B20C969EC0040419D /* ZFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47EB6A20C969EC0040419D /* ZFViewController.m */; };
@@ -98,6 +100,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		880FA6F9C4DCEF2BB4D2644B /* Pods-ZFPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFPlayer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZFPlayer_Example/Pods-ZFPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A4EDC6B3234B489A216C8825 /* libPods-ZFPlayer_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZFPlayer_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B751F36A2F3489F000CA5FCF /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		B751F36B2F3489F000CA5FCF /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		CC112E9820DBD45E0051EE60 /* ZFMixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMixViewController.h; sourceTree = "<group>"; };
 		CC112E9920DBD45E0051EE60 /* ZFMixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMixViewController.m; sourceTree = "<group>"; };
 		CC112E9B20DBD6600051EE60 /* ZFOtherCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFOtherCell.h; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B751F36C2F3489F000CA5FCF /* libcrypto.a in Frameworks */,
+				B751F36D2F3489F000CA5FCF /* libssl.a in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -260,6 +266,8 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				B751F36A2F3489F000CA5FCF /* libcrypto.a */,
+				B751F36B2F3489F000CA5FCF /* libssl.a */,
 			);
 			name = "Example for ZFPlayer";
 			path = ZFPlayer;
@@ -581,7 +589,7 @@
 				ORGANIZATIONNAME = "紫枫";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = ML27AXLXF5;
+						DevelopmentTeam = B65PJYBG9X;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -851,7 +859,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = ML27AXLXF5;
+				DEVELOPMENT_TEAM = B65PJYBG9X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZFPlayer",
@@ -860,8 +868,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFPlayer/ZFPlayer-Prefix.pch";
 				INFOPLIST_FILE = "ZFPlayer/ZFPlayer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZFPlayer",
+				);
 				MARKETING_VERSION = 1.0;
 				MODULEMAP_FILE = "";
 				MODULE_NAME = ExampleApp;
@@ -880,7 +892,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = ML27AXLXF5;
+				DEVELOPMENT_TEAM = B65PJYBG9X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZFPlayer",
@@ -889,8 +901,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFPlayer/ZFPlayer-Prefix.pch";
 				INFOPLIST_FILE = "ZFPlayer/ZFPlayer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZFPlayer",
+				);
 				MARKETING_VERSION = 1.0;
 				MODULEMAP_FILE = "";
 				MODULE_NAME = ExampleApp;

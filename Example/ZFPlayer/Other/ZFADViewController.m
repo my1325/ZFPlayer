@@ -7,7 +7,7 @@
 //
 
 #import "ZFADViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
@@ -24,8 +24,8 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
 @property (nonatomic, strong) UIImageView *containerView;
 @property (nonatomic, strong) ZFPlayerControlView *controlView;
 @property (nonatomic, strong) ZFADControlView *adControlView;
-@property (nonatomic, strong) ZFAVPlayerManager *playerManager;
-@property (nonatomic, strong) ZFAVPlayerManager *adPlayerManager;
+@property (nonatomic, strong) ZFIJKPlayerManager *playerManager;
+@property (nonatomic, strong) ZFIJKPlayerManager *adPlayerManager;
 @end
 
 @implementation ZFADViewController
@@ -42,9 +42,9 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
     self.containerView.frame = CGRectMake(x, y, w, h);
     
     
-    self.playerManager = [[ZFAVPlayerManager alloc] init];
+    self.playerManager = [[ZFIJKPlayerManager alloc] init];
     /// 广告
-    self.adPlayerManager = [[ZFAVPlayerManager alloc] init];
+    self.adPlayerManager = [[ZFIJKPlayerManager alloc] init];
 
     /// 播放器相关
     self.player = [ZFPlayerController playerWithPlayerManager:self.adPlayerManager containerView:self.containerView];

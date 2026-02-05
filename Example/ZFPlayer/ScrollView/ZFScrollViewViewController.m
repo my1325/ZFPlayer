@@ -7,7 +7,7 @@
 //
 
 #import "ZFScrollViewViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+//#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
@@ -37,8 +37,8 @@ static NSString *kVideoCover = @"https://upload-images.jianshu.io/upload_images/
     [self.scrollView addSubview:self.containerView];
     [self.containerView addSubview:self.playBtn];
     
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
-    
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
+
     /// 播放器相关
     self.player = [[ZFPlayerController alloc] initWithScrollView:self.scrollView playerManager:playerManager containerView:self.containerView];
     self.player.controlView = self.controlView;

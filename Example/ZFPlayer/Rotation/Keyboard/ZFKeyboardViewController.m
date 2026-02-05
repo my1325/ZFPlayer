@@ -7,7 +7,7 @@
 //
 
 #import "ZFKeyboardViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/UIView+ZFFrame.h>
@@ -29,7 +29,7 @@
     [self.view addSubview:self.containerView];
     [self.controlView addSubview:self.textField];
     
-    ZFAVPlayerManager *playerManager = [[ZFAVPlayerManager alloc] init];
+    ZFIJKPlayerManager *playerManager = [[ZFIJKPlayerManager alloc] init];
     /// 播放器相关
     self.player = [[ZFPlayerController alloc] initWithPlayerManager:playerManager containerView:self.containerView];
     self.player.controlView = self.controlView;

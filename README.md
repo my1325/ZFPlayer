@@ -74,7 +74,7 @@ ZFPlayerController *player = [ZFPlayerController alloc] initWithScrollView:table
 ```
 
 #### ZFPlayerMediaPlayback
-For the playerMnager,you must conform `ZFPlayerMediaPlayback` protocol,custom playermanager can supports any player SDK，such as `AVPlayer`,`MPMoviePlayerController`,`ijkplayer`,`vlc`,`PLPlayerKit`,`KSYMediaPlayer`and so on，you can reference the `ZFAVPlayerManager`class.
+For the playerMnager,you must conform `ZFPlayerMediaPlayback` protocol,custom playermanager can supports any player SDK，such as `AVPlayer`,`MPMoviePlayerController`,`ijkplayer`,`vlc`,`PLPlayerKit`,`KSYMediaPlayer`and so on，you can reference the `ZFIJKPlayerManager`class.
 
 ```objc
 Class<ZFPlayerMediaPlayback> *playerManager = ...;

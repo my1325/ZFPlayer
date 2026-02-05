@@ -7,7 +7,7 @@
 //  视频详情页
 
 #import "ZFPlayerDetailViewController.h"
-#import <ZFPlayer/ZFAVPlayerManager.h>
+//#import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFIJKPlayerManager.h>
 #import <ZFPlayer/ZFPlayerControlView.h>
 #import "ZFSmallPlayViewController.h"
