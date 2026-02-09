@@ -382,10 +382,32 @@
 - (IJKFFOptions *)options {
     if (!_options) {
         _options = [IJKFFOptions optionsByDefault];
-        /// 精准seek
-        [_options setPlayerOptionIntValue:1 forKey:@"enable-accurate-seek"];
-        /// 解决http播放不了
-        [_options setOptionIntValue:1 forKey:@"dns_cache_clear" ofCategory:kIJKFFOptionCategoryFormat];
+//        /// 精准seek
+//        [_options setPlayerOptionIntValue:1 forKey:@"enable-accurate-seek"];
+//        /// 解决http播放不了
+//        [_options setOptionIntValue:1 forKey:@"dns_cache_clear" ofCategory:kIJKFFOptionCategoryFormat];
+
+        // === 激进缓冲参数 ===
+        [_options setOptionIntValue:1 forKey:@"start-on-prepared" ofCategory:kIJKFFOptionCategoryPlayer];
+        [_options setOptionIntValue:0 forKey:@"packet-buffering" ofCategory:kIJKFFOptionCategoryPlayer];
+        [_options setOptionIntValue:300 forKey:@"max_cached_duration" ofCategory:kIJKFFOptionCategoryPlayer];
+        [_options setOptionIntValue:0 forKey:@"infbuf" ofCategory:kIJKFFOptionCategoryPlayer];
+        [_options setOptionIntValue:1 forKey:@"framedrop" ofCategory:kIJKFFOptionCategoryPlayer];
+        [_options setOptionIntValue:1 forKey:@"fast" ofCategory:kIJKFFOptionCategoryPlayer];
+        [_options setOptionIntValue:0 forKey:@"sync-av-start" ofCategory:kIJKFFOptionCategoryPlayer];
+
+        // === 硬解 ===
+        [_options setOptionIntValue:1 forKey:@"videotoolbox" ofCategory:kIJKFFOptionCategoryPlayer];
+
+        // === 网络优化 ===
+        [_options setOptionIntValue:1 forKey:@"http-detect-range-support" ofCategory:kIJKFFOptionCategoryFormat];
+        [_options setOptionIntValue:1 forKey:@"reconnect" ofCategory:kIJKFFOptionCategoryFormat];
+        [_options setOptionValue:@"nobuffer" forKey:@"fflags" ofCategory:kIJKFFOptionCategoryFormat];
+
+        // === 流信息分析优化 ===
+        [_options setOptionIntValue:1 forKey:@"analyzeduration" ofCategory:kIJKFFOptionCategoryFormat];
+        [_options setOptionIntValue:1024 forKey:@"probesize" ofCategory:kIJKFFOptionCategoryFormat];
+
     }
     return _options;
 }
